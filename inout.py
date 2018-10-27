@@ -1,4 +1,4 @@
-# Librarys
+# Library's
 import datetime
 import RPi.GPIO as GPIO
 import pygame
