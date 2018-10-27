@@ -1,9 +1,10 @@
 # Readme
 ## The rasperry will be programmed in Python, using the following librarys:
-  - RPi.GPIO 0.6.4: https://pypi.org/project/RPi.GPIO/#files
-  - pygame, which should already be installed, to play sounds.
+
+  - RPi.GPIO 0.6.4: https://pypi.org/project/RPi.GPIO/#files
   - datetime to check the current time.
   - socket & sys to send events to a server.
+  - pygame, which should already be installed, to play sounds.
 
   [How to install?]
     - Copy the .tar.gz file that contains the project to the current folder in the Rasperry using an FTP connection.
