@@ -9,7 +9,7 @@ import sys
 # Host
 HOST = ''   # IP or Hostname of you server
 PORT = 8888 # Arbitrary non-privileged port
-connected = False # To send events only if the socket is connected.
+connected = False # Boolean To send events only if the socket is connected.
 
 # Define last activity.
 sleepMode = False
