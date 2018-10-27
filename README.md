@@ -6,7 +6,10 @@
   - socket & sys to send events to a server.
   - pygame, which should already be installed, to play sounds.
 
+
+  ```
   [How to install?]
+  ```
     - Copy the .tar.gz file that contains the project to the current folder in the Rasperry using an FTP connection.
       (You can copy it to a temporary directory such as /va /www/temp and then move it to the desired directory with mv /var/tmp/RPi.GPIO-0.6.4.tar.gz RPi.GPIO-0.6.4.tar.gz )
     - Unzip the file with tar ""-zxvf RPi.GPIO-0.6.4.tar.gz"
