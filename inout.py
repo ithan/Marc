@@ -1,4 +1,5 @@
 # Library's
+from subprocess import call
 import datetime
 import RPi.GPIO as GPIO
 import pygame
@@ -48,10 +49,13 @@ for v in inputs:
 while 1:
 	if GPIO.input(stopInputs[0]) and GPIO.input(stopInputs[1]):
 		# stop
-		shutdown -h now
+		call("sudo shutdown -h now", shell=True)
+		break
+		
 	if lastActivity+datetime.timedelta(minutes = 20) > datetime.datetime.now():
 		# stop
-		shutdown -h now
+		call("sudo shutdown -h now", shell=True)
+		break
 
 	# Reproduce X audio file based on the input-.
 	for i, v in enumerate(inputs):
