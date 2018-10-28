@@ -12,12 +12,11 @@ PORT = 8888 # Arbitrary non-privileged port
 connected = False # Boolean To send events only if the socket is connected.
 
 # Define last activity.
-sleepMode = False
 lastActivity = 0
 
 # The index of the input should match the index of the sound.
 inputs = [10, 12, 14, 16, 18, 20, 22, 24]
-sounds = ["audioOne.wav", "audioTwo.wav", "audioTree.wav", "audioFour.wav", "audioFive.wav", "audioSix.wav", "audioSeven.wav", "audioEight.wav"]
+sounds = ["audioOne.mp3", "audioTwo.mp3", "audioTree.mp3", "audioFour.mp3", "audioFive.mp3", "audioSix.mp3", "audioSeven.mp3", "audioEight.mp3"]
 
 # Stop inputs
 stopInputs = [10, 12]
@@ -35,9 +34,8 @@ except socket.error as msg:
 
 def reproduceSound(audioFile):
 	# Play audio
-	sleepMode = False
 	pygame.mixer.init()
-	pygame.mixer.music.load()
+	pygame.mixer.music.load(audioFile)
 	pygame.mixer.music.play()
 	while pygame.mixer.music.get_busy():
 		continue
@@ -54,9 +52,6 @@ while 1:
 	if lastActivity+datetime.timedelta(minutes = 20) > datetime.datetime.now():
 		# stop
 		shutdown -h now
-	if lastActivity+datetime.timedelta(minutes = 5) > datetime.datetime.now():
-		# sleep.
-		sleepMode = True
 
 	# Reproduce X audio file based on the input-.
 	for i, v in enumerate(inputs):
