@@ -60,3 +60,5 @@ while 1:
 				s.send(i)
 			reproduceSound(sounds[i])
 			lastActivity = datetime.datetime.now()
+
+gpio.cleanup()
