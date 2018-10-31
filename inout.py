@@ -1,4 +1,4 @@
-# Library's
+# libraries 
 from subprocess import call
 import datetime
 import RPi.GPIO as GPIO
