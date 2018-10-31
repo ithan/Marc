@@ -13,7 +13,7 @@ PORT = 8888 # Arbitrary non-privileged port
 connected = False # Boolean To send events only if the socket is connected.
 
 # Define last activity.
-lastActivity = 0
+lastActivity = datetime.datetime.now()
 
 # The index of the input should match the index of the sound.
 inputs = [10, 12, 14, 16, 18, 20, 22, 24]
