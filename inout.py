@@ -19,8 +19,6 @@ lastActivity = datetime.datetime.now()
 inputs = [10, 12, 14, 16, 18, 20, 22, 24]
 sounds = ["audioOne.mp3", "audioTwo.mp3", "audioTree.mp3", "audioFour.mp3", "audioFive.mp3", "audioSix.mp3", "audioSeven.mp3", "audioEight.mp3"]
 
-# Stop inputs
-stopInputs = [10, 12]
 
 # Network setup
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -47,10 +45,6 @@ for v in inputs:
 
 # While the script is runing check for inputs.
 while 1:
-	if GPIO.input(stopInputs[0]) and GPIO.input(stopInputs[1]):
-		# stop
-		call("sudo shutdown -h now", shell=True)
-		break
 		
 	if lastActivity+datetime.timedelta(minutes = 20) > datetime.datetime.now():
 		# stop
